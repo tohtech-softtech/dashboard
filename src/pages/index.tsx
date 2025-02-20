@@ -1,9 +1,10 @@
 import { LinkButton } from "@/components/LinkButton";
+import { Divider } from "@/components/Divider";
 
 export default function Home() {
   return (
     <div className="p-8">
-      <div className="font-bold">ダッシュボード</div>
+      <Divider>ダッシュボード</Divider>
       <div className="grid gap-2">
         <LinkButton href="https://www.tohtech.ac.jp/info/portal/" imgUrl="file.svg">
           ポータルサイト
@@ -21,7 +22,7 @@ export default function Home() {
           学内プリンター
         </LinkButton>
       </div>
-      <div className="font-bold">学生便覧（2024年度）</div>
+      <Divider>学生便覧（2024年度）</Divider>
       <div className="grid gap-2">
         <LinkButton href="https://www.tohtech.ac.jp/outline/disclosure/condition_R5/document/gakuseibinran2024.pdf" imgUrl="file.svg">
           建築学部
