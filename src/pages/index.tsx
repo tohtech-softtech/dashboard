@@ -1,11 +1,12 @@
 import { LinkButton } from "@/components/LinkButton";
+import { BlockLinkButton } from "@/components/BlockLinkButton";
 import { Divider } from "@/components/Divider";
 
 export default function Home() {
   return (
     <div className="p-8">
       <Divider>ダッシュボード</Divider>
-      <div className="grid gap-2">
+      <div className="grid gap-2 grid-cols-2 md:grid-cols-9">
         <LinkButton href="https://www.tohtech.ac.jp/info/portal/" imgUrl="file.svg">
           ポータルサイト
         </LinkButton>
@@ -24,15 +25,15 @@ export default function Home() {
       </div>
       <Divider>学生便覧（2024年度）</Divider>
       <div className="grid gap-2">
-        <LinkButton href="https://www.tohtech.ac.jp/outline/disclosure/condition_R5/document/gakuseibinran2024.pdf" imgUrl="file.svg">
+        <BlockLinkButton href="https://www.tohtech.ac.jp/outline/disclosure/condition_R5/document/gakuseibinran2024.pdf" imgUrl="file.svg">
           建築学部
-        </LinkButton>
-        <LinkButton href="https://www.tohtech.ac.jp/outline/disclosure/condition_R5/document/gakuseibinran2024.pdf" imgUrl="file.svg">
+        </BlockLinkButton>
+        <BlockLinkButton href="https://www.tohtech.ac.jp/outline/disclosure/condition_R5/document/gakuseibinran2024.pdf" imgUrl="file.svg">
           工学部
-        </LinkButton>
-        <LinkButton href="https://www.tohtech.ac.jp/outline/disclosure/condition_R5/document/gakuseibinran2024.pdf" imgUrl="file.svg">
+        </BlockLinkButton>
+        <BlockLinkButton href="https://www.tohtech.ac.jp/outline/disclosure/condition_R5/document/gakuseibinran2024.pdf" imgUrl="file.svg">
           ライフデザイン学部
-        </LinkButton>
+        </BlockLinkButton>
       </div>
     </div>
   );
