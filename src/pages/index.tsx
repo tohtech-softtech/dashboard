@@ -19,7 +19,7 @@ export default function Home() {
         <LinkButton href="https://booklog.jp/users/libtohtech" imgUrl="file.svg">
           電子図書館
         </LinkButton>
-        <LinkButton href="" imgUrl="file.svg">
+        <LinkButton href="https://print.infcm.tohtech.ac.jp" imgUrl="file.svg">
           学内プリンター
         </LinkButton>
       </div>
