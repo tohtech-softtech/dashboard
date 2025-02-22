@@ -86,7 +86,7 @@
         "destination": "八木山動物公園駅",
         "departure_hour": 15,
         "departure_minute": 0,
-        "time_required": 15,
+        "time_required": 25,
         "bus_type": "B"
     },
     {
@@ -113,7 +113,7 @@
         "destination": "八木山動物公園駅",
         "departure_hour": 17,
         "departure_minute": 15,
-        "time_required": 10,
+        "time_required": 20,
         "bus_type": "A"
     },
     {
