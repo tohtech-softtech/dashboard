@@ -22,6 +22,9 @@ export default function Home() {
         <LinkButton href="https://print.infcm.tohtech.ac.jp" imgUrl="file.svg">
           学内プリンター
         </LinkButton>
+        <LinkButton href="/shuttle" imgUrl="file.svg">
+          シャトルバス
+        </LinkButton>
       </div>
       <Divider>学生便覧（2024年度）</Divider>
       <div className="grid gap-2">
