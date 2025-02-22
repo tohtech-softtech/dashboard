@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="p-8">
       <Divider>ダッシュボード</Divider>
-      <div className="grid gap-2 grid-cols-2 md:grid-cols-9">
+      <div className="grid grid-cols-2 gap-2 md:grid-cols-9">
         <LinkButton href="https://www.tohtech.ac.jp/info/portal/" imgUrl="file.svg">
           ポータルサイト
         </LinkButton>
