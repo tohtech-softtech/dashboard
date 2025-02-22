@@ -10,21 +10,35 @@ interface TimeTableData {
   bus_type: string;
 }
 
-const fetchTimeTables = async () => {
-  const response = await fetch("data/nagamachi-campus.json");
+type Location = "yagiyama" | "nagamachi" | "station";
+
+const getJsonPath = (location: Location): string => {
+  switch (location) {
+    case "yagiyama":
+      return "data/yagiyama-campus.json";
+    case "nagamachi":
+      return "data/nagamachi-campus.json";
+    case "station":
+      return "data/yagiyama-station.json";
+  }
+};
+
+const fetchTimeTables = async (location: Location) => {
+  const response = await fetch(getJsonPath(location));
   return response.json();
 };
 
 export default function TimeTable() {
   const [timeTable, setTimeTable] = useState<TimeTableData[]>([]);
+  const [location, setLocation] = useState<Location>("yagiyama");
 
   useEffect(() => {
     const loadData = async () => {
-      const data = await fetchTimeTables();
+      const data = await fetchTimeTables(location);
       setTimeTable(data);
     };
     loadData();
-  }, []);
+  }, [location]);
 
   return (
     <>
@@ -44,14 +58,14 @@ export default function TimeTable() {
         ))}
       </div>
       <div className="btm-nav">
-        <button type="button">
-          <span className="btm-nav-label text-xs font-bold">八木山キャンパス</span>
+        <button type="button" className={location === "yagiyama" ? "active" : ""} onClick={() => setLocation("yagiyama")}>
+          <span className="btm-nav-label text-xs font-bold">八木山キャンパス 発</span>
         </button>
-        <button type="button" className="active">
-          <span className="btm-nav-label text-xs font-bold">長町キャンパス</span>
+        <button type="button" className={location === "nagamachi" ? "active" : ""} onClick={() => setLocation("nagamachi")}>
+          <span className="btm-nav-label text-xs font-bold">長町キャンパス 発</span>
         </button>
-        <button type="button">
-          <span className="btm-nav-label text-xs font-bold">八木山動物公園駅</span>
+        <button type="button" className={location === "station" ? "active" : ""} onClick={() => setLocation("station")}>
+          <span className="btm-nav-label text-xs font-bold">八木山動物公園駅 発</span>
         </button>
       </div>
     </>
