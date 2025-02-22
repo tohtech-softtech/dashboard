@@ -1,3 +1,4 @@
+import { Divider } from "@/components/Divider";
 import { useState, useEffect } from "react";
 
 interface TimeTableData {
@@ -47,11 +48,12 @@ export default function TimeTable() {
   return (
     <>
       <div className="grid grid-cols-1 gap-4 p-8 pb-20 ">
+        <Divider>シャトルバス</Divider>
         {timeTable.map((item) => (
           <div key={item.id} className="card grid grid-cols-2 bg-gray-100 p-4">
             <div className="text-left">
-              <div className="text-base font-medium">{item.destination}</div>
-              <div className="flex grid-cols-2 gap-2">
+              <div className="text-base font-semibold">{item.destination} 行</div>
+              <div className="flex grid-cols-2 gap-2 text-sm font-semibold">
                 {item.bus_type === "" ? null : <div>{item.bus_type}</div>}
                 <div>{item.time_required}分</div>
               </div>
