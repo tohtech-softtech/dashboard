@@ -23,7 +23,7 @@ const getJsonPath = (location: Location): string => {
   }
 };
 
-const fetchTimeTables = async (location: Location) => {
+const fetchTimeTable = async (location: Location) => {
   const response = await fetch(getJsonPath(location));
   return response.json();
 };
@@ -34,9 +34,13 @@ export default function TimeTable() {
 
   useEffect(() => {
     const loadData = async () => {
-      const data = await fetchTimeTables(location);
+      const data = await fetchTimeTable(location);
       setTimeTable(data);
     };
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
     loadData();
   }, [location]);
 
