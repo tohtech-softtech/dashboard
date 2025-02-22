@@ -18,8 +18,8 @@ export const BlockLinkButton: React.FC<BlockLinkButton> = ({ href, imgUrl, child
         <Image
           src={imgUrl}
           alt=""
-          width={16}
-          height={16}
+          width={24}
+          height={24}
         />
         {children}
       </Link>
