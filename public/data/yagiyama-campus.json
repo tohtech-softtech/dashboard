@@ -47,10 +47,10 @@
     {
         "id": 6,
         "departure": "八木山キャンパス",
-        "destination": "長町キャンパス",
-        "departure_hour": 12,
-        "departure_minute": 10,
-        "time_required": 15,
+        "destination": "八木山動物公園駅",
+        "departure_hour": 10,
+        "departure_minute": 50,
+        "time_required": 5,
         "bus_type": "A"
     },
     {
@@ -58,9 +58,9 @@
         "departure": "八木山キャンパス",
         "destination": "長町キャンパス",
         "departure_hour": 12,
-        "departure_minute": 35,
+        "departure_minute": 10,
         "time_required": 15,
-        "bus_type": "B"
+        "bus_type": "A"
     },
     {
         "id": 8,
@@ -69,16 +69,16 @@
         "departure_hour": 12,
         "departure_minute": 35,
         "time_required": 15,
-        "bus_type": "C"
+        "bus_type": "B"
     },
     {
         "id": 9,
         "departure": "八木山キャンパス",
         "destination": "長町キャンパス",
-        "departure_hour": 14,
+        "departure_hour": 12,
         "departure_minute": 35,
         "time_required": 15,
-        "bus_type": "A"
+        "bus_type": "C"
     },
     {
         "id": 10,
@@ -87,32 +87,32 @@
         "departure_hour": 14,
         "departure_minute": 35,
         "time_required": 15,
-        "bus_type": "B"
+        "bus_type": "A"
     },
     {
         "id": 11,
         "departure": "八木山キャンパス",
         "destination": "長町キャンパス",
-        "departure_hour": 15,
-        "departure_minute": 50,
-        "time_required": 10,
-        "bus_type": "A"
+        "departure_hour": 14,
+        "departure_minute": 35,
+        "time_required": 15,
+        "bus_type": "B"
     },
     {
         "id": 12,
         "departure": "八木山キャンパス",
-        "destination": "長町キャンパス",
+        "destination": "八木山動物公園駅",
         "departure_hour": 15,
-        "departure_minute": 50,
-        "time_required": 10,
+        "departure_minute": 20,
+        "time_required": 5,
         "bus_type": "B"
     },
     {
         "id": 13,
         "departure": "八木山キャンパス",
         "destination": "長町キャンパス",
-        "departure_hour": 17,
-        "departure_minute": 0,
+        "departure_hour": 15,
+        "departure_minute": 50,
         "time_required": 10,
         "bus_type": "A"
     },
@@ -120,8 +120,8 @@
         "id": 14,
         "departure": "八木山キャンパス",
         "destination": "長町キャンパス",
-        "departure_hour": 17,
-        "departure_minute": 0,
+        "departure_hour": 15,
+        "departure_minute": 50,
         "time_required": 10,
         "bus_type": "B"
     },
@@ -130,7 +130,7 @@
         "departure": "八木山キャンパス",
         "destination": "長町キャンパス",
         "departure_hour": 17,
-        "departure_minute": 50,
+        "departure_minute": 0,
         "time_required": 10,
         "bus_type": "A"
     },
@@ -138,9 +138,45 @@
         "id": 16,
         "departure": "八木山キャンパス",
         "destination": "長町キャンパス",
+        "departure_hour": 17,
+        "departure_minute": 0,
+        "time_required": 10,
+        "bus_type": "B"
+    },
+    {
+        "id": 17,
+        "departure": "八木山キャンパス",
+        "destination": "八木山動物公園駅",
+        "departure_hour": 17,
+        "departure_minute": 30,
+        "time_required": 5,
+        "bus_type": "A"
+    },
+    {
+        "id": 18,
+        "departure": "八木山キャンパス",
+        "destination": "長町キャンパス",
+        "departure_hour": 17,
+        "departure_minute": 50,
+        "time_required": 10,
+        "bus_type": "A"
+    },
+    {
+        "id": 19,
+        "departure": "八木山キャンパス",
+        "destination": "長町キャンパス",
         "departure_hour": 18,
         "departure_minute": 40,
         "time_required": 10,
         "bus_type": "B"
+    },
+    {
+        "id": 20,
+        "departure": "八木山キャンパス",
+        "destination": "八木山動物公園駅",
+        "departure_hour": 18,
+        "departure_minute": 55,
+        "time_required": 5,
+        "bus_type": "A"
     }
 ]
