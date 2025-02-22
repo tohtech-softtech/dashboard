@@ -96,7 +96,7 @@
         "departure_hour": 15,
         "departure_minute": 50,
         "time_required": 10,
-        "bus_type": null
+        "bus_type": "A"
     },
     {
         "id": 12,
