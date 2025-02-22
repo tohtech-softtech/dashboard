@@ -13,7 +13,7 @@ export const LinkButton: React.FC<LinkButtonProps> = ({ href, imgUrl, children }
     <div>
       <Link
         href={href}
-        className="btn btn-block p-2 h-20 text-xs grid grid-cols-1 grid-rows-[auto-1fr] justify-items-center gap-0"
+        className="btn btn-block grid h-20 grid-cols-1 grid-rows-[auto-1fr] justify-items-center gap-0 p-2 text-xs "
       >
         <Image
           src={imgUrl}

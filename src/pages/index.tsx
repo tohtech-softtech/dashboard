@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="p-8">
       <Divider>ダッシュボード</Divider>
-      <div className="grid gap-2 grid-cols-2 md:grid-cols-9">
+      <div className="grid grid-cols-2 gap-2 md:grid-cols-9">
         <LinkButton href="https://www.tohtech.ac.jp/info/portal/" imgUrl="ph-building-office-duotone.svg">
           ポータルサイト
         </LinkButton>
@@ -20,7 +20,7 @@ export default function Home() {
         <LinkButton href="https://booklog.jp/users/libtohtech" imgUrl="ph-device-tablet-camera-duotone.svg">
           電子図書館
         </LinkButton>
-        <LinkButton href="" imgUrl="ph-printer-duotone.svg">
+        <LinkButton href="https://print.infcm.tohtech.ac.jp" imgUrl="ph-printer-duotone.svg">
           学内プリンター
         </LinkButton>
       </div>
