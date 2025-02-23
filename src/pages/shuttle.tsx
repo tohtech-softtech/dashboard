@@ -1,7 +1,8 @@
 import { Divider } from "@/components/Divider";
+import { TimetableCard } from "@/components/TimetableCard";
 import { useState, useEffect } from "react";
 
-interface TimeTableData {
+interface TimetableData {
   id: number;
   departure: string;
   destination: string;
@@ -24,19 +25,19 @@ const getJsonPath = (location: Location): string => {
   }
 };
 
-const fetchTimeTable = async (location: Location) => {
+const fetchTimetable = async (location: Location) => {
   const response = await fetch(getJsonPath(location));
   return response.json();
 };
 
-export default function TimeTable() {
-  const [timeTable, setTimeTable] = useState<TimeTableData[]>([]);
+export default function Timetable() {
+  const [timetable, setTimetable] = useState<TimetableData[]>([]);
   const [location, setLocation] = useState<Location>("yagiyama");
 
   useEffect(() => {
     const loadData = async () => {
-      const data = await fetchTimeTable(location);
-      setTimeTable(data);
+      const data = await fetchTimetable(location);
+      setTimetable(data);
     };
     window.scrollTo({
       top: 0,
@@ -57,19 +58,8 @@ export default function TimeTable() {
             }[location]
           }
         </Divider>
-        {timeTable.map((item) => (
-          <div key={item.id} className="card grid grid-cols-2 bg-gray-100 p-4">
-            <div className="text-left">
-              <div className="text-base font-bold">{item.destination} 行</div>
-              <div className="flex grid-cols-2 gap-2 text-sm font-bold">
-                {item.bus_type === "" ? null : <div>{item.bus_type}</div>}
-                <div>{item.time_required}分</div>
-              </div>
-            </div>
-            <div className="flex items-center justify-end text-xl font-extrabold">
-              {item.departure_hour}:{item.departure_minute === 0 ? "00" : item.departure_minute}
-            </div>
-          </div>
+        {timetable.map((item) => (
+          <TimetableCard key={item.id} {...item} />
         ))}
       </div>
       <div className="btm-nav">
