@@ -23,7 +23,7 @@ export default function Home() {
         <LinkButton href="https://print.infcm.tohtech.ac.jp" imgUrl="ph-printer-duotone.svg">
           学内プリンター
         </LinkButton>
-        <LinkButton href="/shuttle" imgUrl="file.svg">
+        <LinkButton href="/shuttle" imgUrl="ph-bus-duotone.svg">
           シャトルバス
         </LinkButton>
       </div>
