@@ -65,7 +65,7 @@ export default function Timetable() {
           return (
             <div key={item.id} className="space-y-4">
               {showCurrentTime && index === timetable.findIndex((t) => t.departure_hour > date.getHours() || (t.departure_hour === date.getHours() && t.departure_minute > date.getMinutes())) && (
-                <div className="card gap-2 bg-blue-100 p-4 text-center">
+                <div className="card gap-2 p-4 text-center">
                   <div className="text-lg font-bold">
                     現在時刻: {date.getHours().toString().padStart(2, "0")}:{date.getMinutes().toString().padStart(2, "0")}
                   </div>
