@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "departure": "八木山動物公園駅",
+        "destination": "八木山キャンパス",
+        "departure_hour": 10,
+        "departure_minute": 55,
+        "time_required": 5,
+        "bus_type": ""
+    },
+    {
+        "id": 2,
+        "departure": "八木山動物公園駅",
+        "destination": "八木山キャンパス",
+        "departure_hour": 15,
+        "departure_minute": 25,
+        "time_required": 5,
+        "bus_type": ""
+    }
+]
