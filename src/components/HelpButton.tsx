@@ -1,0 +1,37 @@
+import Image from "next/image";
+
+interface HelpButtonProps {
+  imageUrl: string;
+  onClicked: () => void;
+}
+
+export const HelpButton: React.FC<HelpButtonProps> = ({ imageUrl, onClicked }) => {
+  return (
+    <div style={{ position: "fixed", bottom: "1rem", right: "1rem" }}>
+      <div className="fab" onClick={onClicked}>
+        <Image src={imageUrl} alt="" width={48} height={48} />
+      </div>
+      <HelpModal />
+    </div>
+  );
+};
+
+const HelpModal: React.FC = () => {
+  return (
+    <dialog id="help_modal" className="modal">
+      <div className="modal-box w-11/12 max-w-5xl">
+        <form method="dialog">
+          <button className="btn btn-circle btn-ghost btn-sm absolute right-2 top-2">✕</button>
+        </form>
+        <h2 className="text-lg font-bold">ダッシュボードについて</h2>
+        <p>このダッシュボードは大学のポータルサイトや各種サービスに簡単にアクセスできるサイトです。</p>
+        <br />
+        <h3 className="text-lg font-bold">注意事項</h3>
+        <p>このサイトは大学とは関係のない非公式サイトになります。</p>
+        <p>提供する情報が正確でない場合があります。ご注意ください。</p>
+        <br />
+        <p>制作 : ソフトウェア技術研究会</p>
+      </div>
+    </dialog>
+  );
+};

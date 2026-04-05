@@ -2,6 +2,7 @@ import { LinkButton } from "@/components/LinkButton";
 import { BlockLinkButton } from "@/components/BlockLinkButton";
 import { Divider } from "@/components/Divider";
 import Head from "next/head";
+import { HelpButton } from "@/components/HelpButton";
 
 export default function Home() {
   return (
@@ -53,6 +54,16 @@ export default function Home() {
             ライフデザイン学部
           </BlockLinkButton>
         </div>
+
+        <HelpButton
+          imageUrl="ph-question-duotone.svg"
+          onClicked={() => {
+            const helpModal = document.getElementById("help_modal");
+            if (helpModal instanceof HTMLDialogElement) {
+              helpModal.showModal();
+            }
+          }}
+        />
       </div>
     </>
   );
