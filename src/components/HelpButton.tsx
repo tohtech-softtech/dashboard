@@ -27,15 +27,12 @@ const HelpModal: React.FC = () => {
         <p>このダッシュボードは大学のポータルサイトや各種サービスに簡単にアクセスできるサイトです。</p>
         <br />
         <h3 className="text-lg font-bold">注意事項</h3>
-        <p>このサイトは大学とは関係のない非公式サイトになります。</p>
-        <p>提供する情報が正確でない場合があります。ご注意ください。</p>
+        <p>リンク切れやシャトルバス時刻表の情報が正確でない場合があります。ご注意ください。</p>
         <br />
-        <p>
-          制作 :{" "}
-          <a href="https://softtechtohtech.work/" target="_blank" rel="noopener noreferrer">
-            ソフトウェア技術研究会
-          </a>
-        </p>
+        <h3 className="text-lg font-bold">制作</h3>
+        <a href="https://softtechtohtech.work/" target="_blank" rel="noopener noreferrer">
+          ソフトウェア技術研究会
+        </a>
       </div>
     </dialog>
   );
