@@ -30,7 +30,12 @@ const HelpModal: React.FC = () => {
         <p>このサイトは大学とは関係のない非公式サイトになります。</p>
         <p>提供する情報が正確でない場合があります。ご注意ください。</p>
         <br />
-        <p>制作 : ソフトウェア技術研究会</p>
+        <p>
+          制作 :{" "}
+          <a href="https://softtechtohtech.work/" target="_blank" rel="noopener noreferrer">
+            ソフトウェア技術研究会
+          </a>
+        </p>
       </div>
     </dialog>
   );
