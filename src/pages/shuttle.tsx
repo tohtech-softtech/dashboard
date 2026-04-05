@@ -1,6 +1,7 @@
 import { Divider } from "@/components/Divider";
 import { TimetableCard } from "@/components/TimetableCard";
 import { useState, useEffect } from "react";
+import Head from "next/head";
 
 interface TimetableData {
   id: number;
@@ -50,6 +51,9 @@ export default function Timetable() {
 
   return (
     <>
+      <Head>
+        <title>シャトルバス</title>
+      </Head>
       <div className="grid grid-cols-1 gap-4 p-8 pb-24 ">
         <Divider>
           {
@@ -61,26 +65,43 @@ export default function Timetable() {
           }
         </Divider>
         {timetable.map((item, index) => {
-          const showCurrentTime = date.getHours() < item.departure_hour || (date.getHours() === item.departure_hour && date.getMinutes() < item.departure_minute);
+          const showCurrentTime =
+            date.getHours() < item.departure_hour ||
+            (date.getHours() === item.departure_hour && date.getMinutes() < item.departure_minute);
           return (
             <div key={item.id} className="space-y-4">
-              {showCurrentTime && index === timetable.findIndex((t) => t.departure_hour > date.getHours() || (t.departure_hour === date.getHours() && t.departure_minute > date.getMinutes())) && (
-                <div className="card gap-2 p-4 text-center">
-                  <div className="text-lg font-bold">
-                    現在時刻: {date.getHours().toString().padStart(2, "0")}:{date.getMinutes().toString().padStart(2, "0")}
+              {showCurrentTime &&
+                index ===
+                  timetable.findIndex(
+                    (t) =>
+                      t.departure_hour > date.getHours() ||
+                      (t.departure_hour === date.getHours() && t.departure_minute > date.getMinutes()),
+                  ) && (
+                  <div className="card gap-2 p-4 text-center">
+                    <div className="text-lg font-bold">
+                      現在時刻: {date.getHours().toString().padStart(2, "0")}:
+                      {date.getMinutes().toString().padStart(2, "0")}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
               <TimetableCard {...item} />
             </div>
           );
         })}
       </div>
       <div className="btm-nav">
-        <button type="button" className={location === "yagiyama" ? "active" : ""} onClick={() => setLocation("yagiyama")}>
+        <button
+          type="button"
+          className={location === "yagiyama" ? "active" : ""}
+          onClick={() => setLocation("yagiyama")}
+        >
           <span className="btm-nav-label text-xs font-extrabold">八木山キャンパス 発</span>
         </button>
-        <button type="button" className={location === "nagamachi" ? "active" : ""} onClick={() => setLocation("nagamachi")}>
+        <button
+          type="button"
+          className={location === "nagamachi" ? "active" : ""}
+          onClick={() => setLocation("nagamachi")}
+        >
           <span className="btm-nav-label text-xs font-extrabold">長町キャンパス 発</span>
         </button>
         <button type="button" className={location === "station" ? "active" : ""} onClick={() => setLocation("station")}>
