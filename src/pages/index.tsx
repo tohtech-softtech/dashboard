@@ -27,15 +27,15 @@ export default function Home() {
           シャトルバス
         </LinkButton>
       </div>
-      <Divider>学生便覧（2024年度）</Divider>
+      <Divider>学生便覧（2026年度）</Divider>
       <div className="grid gap-2">
-        <BlockLinkButton href="https://www.tohtech.ac.jp/outline/disclosure/condition_R5/document/gakuseibinran2024.pdf" imgUrl="ph-file-pdf-duotone.svg">
-          建築学部
-        </BlockLinkButton>
-        <BlockLinkButton href="https://www.tohtech.ac.jp/outline/disclosure/condition_R5/document/gakuseibinran2024.pdf" imgUrl="ph-file-pdf-duotone.svg">
+        <BlockLinkButton href="https://www.tohtech.ac.jp/outline/disclosure/condition_R8/document/gakuseibinran2026.pdf#page=22" imgUrl="ph-file-pdf-duotone.svg">
           工学部
         </BlockLinkButton>
-        <BlockLinkButton href="https://www.tohtech.ac.jp/outline/disclosure/condition_R5/document/gakuseibinran2024.pdf" imgUrl="ph-file-pdf-duotone.svg">
+        <BlockLinkButton href="https://www.tohtech.ac.jp/outline/disclosure/condition_R8/document/gakuseibinran2026.pdf#page=79" imgUrl="ph-file-pdf-duotone.svg">
+          建築学部
+        </BlockLinkButton>
+        <BlockLinkButton href="https://www.tohtech.ac.jp/outline/disclosure/condition_R8/document/gakuseibinran2026.pdf#page=102" imgUrl="ph-file-pdf-duotone.svg">
           ライフデザイン学部
         </BlockLinkButton>
       </div>
