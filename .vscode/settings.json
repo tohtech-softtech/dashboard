@@ -1,4 +1,6 @@
 {
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "files.associations": {
     "*.css": "tailwindcss"
   },
@@ -9,5 +11,4 @@
     "source.fixAll.eslint": "explicit"
   },
   "eslint.enable": true,
-  "eslint.format.enable": true,
 }
